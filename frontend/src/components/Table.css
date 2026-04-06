@@ -1,0 +1,127 @@
+.table-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.data-table th {
+  text-align: left;
+  padding: 11px 16px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text2);
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  background: var(--surface2);
+  border-bottom: 1px solid var(--border);
+}
+
+.data-table td {
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+  color: var(--text);
+}
+
+.data-table tbody tr:last-child td { border-bottom: none; }
+
+.data-table tbody tr:hover { background: var(--surface2); }
+
+.muted { color: var(--text2) !important; font-size: 12px; }
+
+.name-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.table-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--purple-bg);
+  color: var(--purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  flex-shrink: 0;
+  border: 1px solid rgba(124,58,237,0.15);
+}
+
+.table-avatar.sm {
+  width: 26px;
+  height: 26px;
+  font-size: 10px;
+}
+
+.task-title-cell { font-weight: 500; color: var(--text); margin-bottom: 2px; }
+.task-desc-cell { font-size: 11px; color: var(--text3); margin-top: 2px; }
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.status-pill .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.status-pill.approved { background: var(--success-bg); color: var(--success); }
+.status-pill.approved .dot { background: var(--success); }
+.status-pill.pending { background: var(--warning-bg); color: var(--warning); }
+.status-pill.pending .dot { background: var(--warning); }
+.status-pill.progress { background: var(--accent-bg); color: var(--accent); }
+.status-pill.progress .dot { background: var(--accent); }
+
+.action-btns { display: flex; gap: 6px; }
+
+.btn-action {
+  padding: 5px 13px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+  border: 1px solid;
+  background: transparent;
+  transition: all 0.15s;
+}
+
+.btn-action.success {
+  color: var(--success);
+  border-color: rgba(22,163,74,0.3);
+}
+.btn-action.success:hover { background: var(--success-bg); }
+
+.btn-action.danger {
+  color: var(--danger);
+  border-color: rgba(220,38,38,0.3);
+}
+.btn-action.danger:hover { background: var(--danger-bg); }
+
+.table-empty {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  text-align: center;
+  color: var(--text2);
+  font-size: 13px;
+}

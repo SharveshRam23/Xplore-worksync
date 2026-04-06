@@ -1,0 +1,117 @@
+.task-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: box-shadow 0.15s;
+}
+
+.task-card:hover { box-shadow: var(--shadow); }
+
+.task-card.done {
+  opacity: 0.65;
+  background: var(--surface2);
+}
+
+.tc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tc-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.tc-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.tc-status.pending { background: var(--warning-bg); color: var(--warning); }
+.tc-status.pending .tc-dot { background: var(--warning); }
+.tc-status.progress { background: var(--accent-bg); color: var(--accent); }
+.tc-status.progress .tc-dot { background: var(--accent); }
+.tc-status.completed { background: var(--success-bg); color: var(--success); }
+.tc-status.completed .tc-dot { background: var(--success); }
+
+.tc-overdue {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--danger);
+  background: var(--danger-bg);
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+.tc-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.3px;
+  line-height: 1.4;
+}
+
+.tc-desc {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.6;
+}
+
+.tc-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.tc-due {
+  font-size: 12px;
+  color: var(--text3);
+  font-family: 'DM Mono', monospace;
+}
+
+.tc-due.overdue { color: var(--danger); }
+
+.tc-by { font-size: 12px; color: var(--text3); }
+
+.tc-footer {
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tc-select-label {
+  font-size: 11px;
+  color: var(--text3);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.tc-select {
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface2);
+  color: var(--text);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.tc-select:focus {
+  border-color: var(--accent);
+  outline: none;
+}
