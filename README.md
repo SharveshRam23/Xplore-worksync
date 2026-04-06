@@ -9,11 +9,7 @@ taskflow/
 └── frontend/         → React.js SPA
 ```
 
-## Quick Start
 
-### Prerequisites
-- Node.js v18+
-- MongoDB (local or Atlas URI)
 
 ---
 
@@ -21,13 +17,11 @@ taskflow/
 ```bash
 cd backend
 npm install
-# Edit .env if needed (default: localhost MongoDB)
 npm run dev
 ```
-Server starts at: http://localhost:5000
 
 **Default Admin credentials (auto-seeded):**
-- Email: `admin@taskflow.com`
+- Email: `admin@worksync.com`
 - Password: `admin123`
 
 ---
@@ -38,7 +32,6 @@ cd frontend
 npm install
 npm start
 ```
-App opens at: http://localhost:3000
 
 ---
 
@@ -77,6 +70,7 @@ App opens at: http://localhost:3000
 | PATCH | /api/employee/tasks/:id/status | Employee | Update task status |
 | GET | /api/employee/stats | Employee | My task stats |
 
-## Tech Stack
-- **Backend:** Node.js, Express.js, MongoDB, Mongoose, JWT, bcryptjs
-- **Frontend:** React 18, React Router v6, Axios, CSS Modules
+## deployment link
+backend - https://xplore-worksync.onrender.com/
+frontend -xplore-worksync-z4eq-jvu7erskn-sharveshram23s-projects.vercel.app
+
