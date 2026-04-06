@@ -10,7 +10,10 @@ const app = express();
 connectDB();
 
 // Middleware
-app.use(cors({ origin: 'https://xplore-worksync.vercel.app', credentials: true }));
+app.use(cors({
+  origin: ['https://xplore-worksync.vercel.app', 'http://localhost:3000'],
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
