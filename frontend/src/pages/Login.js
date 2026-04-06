@@ -51,21 +51,18 @@ export default function Login() {
           <form onSubmit={handleSubmit} className="auth-form">
             <div className="form-group">
               <label>Email address</label>
-              <input type="email" name="email" value={form.email} onChange={handleChange} placeholder="you@example.com" required />
+              <input type="email" name="email" value={form.email} onChange={handleChange} autoComplete="off" required />
             </div>
             <div className="form-group">
               <label>Password</label>
-              <input type="password" name="password" value={form.password} onChange={handleChange} placeholder="••••••••" required />
+              <input type="password" name="password" value={form.password} onChange={handleChange} autoComplete="new-password" required />
             </div>
             {error && <div className="alert alert-error">{error}</div>}
             <button type="submit" className="btn-auth" disabled={loading}>
               {loading ? <span className="btn-spinner" /> : 'Continue →'}
             </button>
           </form>
-          <div className="auth-hint">
-            <div className="hint-title">Demo credentials</div>
-            <div className="hint-row"><span>Admin:</span> admin@worksync.com / admin123</div>
-          </div>
+
           <p className="auth-switch">
             New employee? <Link to="/register">Create an account</Link>
           </p>
