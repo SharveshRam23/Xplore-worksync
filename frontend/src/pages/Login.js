@@ -62,6 +62,10 @@ export default function Login() {
               {loading ? <span className="btn-spinner" /> : 'Continue →'}
             </button>
           </form>
+          <div className="auth-hint">
+            <div className="hint-title">Demo credentials</div>
+            <div className="hint-row"><span>Admin:</span> admin@worksync.com / admin123</div>
+          </div>
 
           <p className="auth-switch">
             New employee? <Link to="/register">Create an account</Link>
